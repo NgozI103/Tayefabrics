@@ -23,30 +23,34 @@ const heroContent = [
     description:
       "Shop now and embrace the beauty of tradition with a modern twist.",
     buttonText: "Discover More",
-    image: "./Images/newinspiration.png",
+    image: "./Images/hero-page-image-1.png",
+  },
+
+  {
+    title: "",
+    description: "",
+    buttonText: "",
+    image: "./Images/launchhero.png",
   },
 ];
 
-heroContent.map((content) => {
-  container.innerHTML += `
-      <li class="glide__slide has-overlay">
-      <div class="center">
-        <div class="left">
-          <span>${content.title}</span>
-          <h1>${content.title}</h1>
-          <p>
-            ${content.description}
-          </p>
-          <a href="" class="hero-btn">${content.buttonText}</a>
+if (container) {
+  const slidesHTML = heroContent
+    .map((content) => {
+      return `
+      <li class="glide__slide has-overlay" style="background-image: url(${content.image})">
+        <div class="center">
+          <div class="left">
+            <span>${content.title}</span>
+            <h1>${content.title}</h1>
+            <p>${content.description}</p>
+            <a href="" class=${content?.buttonText ? "hero-btn" : ""}>${content?.buttonText}</a>
+          </div>
         </div>
-        <div class="right">
-          <img
-            src="${content.image}"
-            class="img1 hero-img"
-            alt="Hero Image"
-          />
-        </div>
-      </div>
-    </li>
-  `;
-});
+      </li>
+    `;
+    })
+    .join("");
+
+  container.innerHTML = slidesHTML;
+}
