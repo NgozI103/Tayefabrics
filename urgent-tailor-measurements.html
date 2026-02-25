@@ -7,56 +7,36 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css"
-    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Taye's fabrics</title>
+    <title>Urgent Tailoring Measurements | Taye's Fabrics</title>
   </head>
   <body>
-    <!-- Header -->
     <header class="header" id="header">
-      <!-- Top nav -->
       <div class="top-nav">
         <div class="container d-flex">
           <p>Order Online or Call Us: +234 706 370 1725</p>
           <ul class="d-flex">
-            <li><a href="about.html">About</a></li>
-            <li><a href="urgent-tailor.html">Urgent Tailor</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
-      <!-- Navigation -->
+
       <div class="navigation">
         <div class="nav-center container d-flex">
           <img src="/Images/logo.png" alt="Brand Logo" class="logo" />
           <ul class="nav-list d-flex">
             <li class="mobile-menu-header"><img src="/Images/logo.png" alt="Taye's Fabrics" class="mobile-menu-logo" /></li>
-            <li class="nav-item desktop-nav-item">
-              <a href="home.html" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item desktop-nav-item">
-              <a href="shop.html" class="nav-link">Shop</a>
-            </li>
-            <li class="nav-item desktop-nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item desktop-nav-item">
-              <a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a>
-            </li>
-            <li class="nav-item desktop-nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item mobile-nav-item"><a href="home.html" class="nav-link active">Home</a></li>
+            <li class="nav-item desktop-nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item desktop-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+            <li class="nav-item desktop-nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item desktop-nav-item"><a href="urgent-tailor.html" class="nav-link active">Urgent Tailor</a></li>
+            <li class="nav-item desktop-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item mobile-nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item mobile-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
             <li class="nav-item mobile-nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item mobile-nav-item"><a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a></li>
+            <li class="nav-item mobile-nav-item"><a href="urgent-tailor.html" class="nav-link active">Urgent Tailor</a></li>
             <li class="nav-item mobile-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             <li class="mobile-auth-actions">
               <a href="login.html" class="mobile-auth-btn mobile-auth-btn-outline">Login</a>
@@ -86,18 +66,12 @@
                 </div>
               </div>
             </div>
-              <div class="icon"><i class="bx bx-search"></i></div>
-              <div class="icon">
-                <i class="bx bx-heart"></i>
-                <span class="d-flex">0</span>
-              </div>
-              <a href="cart.html" class="icon"
-                ><i class="bx bx-cart"></i>
-                <span class="d-flex">0</span>
-              </a>
+              <a href="#" class="icon"><i class="bx bx-search"></i></a>
+              <a href="wishlist.html" class="icon"><i class="bx bx-heart"></i><span class="d-flex">0</span></a>
+              <a href="cart.html" class="icon"><i class="bx bx-cart"></i><span class="d-flex">0</span></a>
             </li>
           </ul>
-          <!-- Icons -->
+
           <div class="desktop-header-actions">
             <label class="desktop-header-search">
               <i class="bx bx-search"></i>
@@ -131,215 +105,90 @@
               <span>0</span>
             </a>
           </div>
-          <!-- Hamburger -->
-          <div class="hamburger">
-            <i class="bx bx-menu-alt-left"></i>
-          </div>
-        </div>
-      </div>
 
-      <!-- Hero -->
-      <div class="hero">
-        <div class="glide" id="glide1">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides" id="hero-container"></ul>
-
-            <div class="glide__bullets" data-glide-el="controls[nav]">
-              <button
-                class="glide__bullet"
-                data-glide-dir="=0"
-                aria-label="Go to slide 1"
-              ></button>
-              <button
-                class="glide__bullet"
-                data-glide-dir="=1"
-                aria-label="Go to slide 2"
-              ></button>
-              <button
-                class="glide__bullet"
-                data-glide-dir="=2"
-                aria-label="Go to slide 3"
-              ></button>
-            </div>
-          </div>
+          <div class="hamburger"><i class="bx bx-menu-alt-left"></i></div>
         </div>
       </div>
     </header>
-    <!-- Category -->
 
-    <section class="section category-section">
-      <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="section-title">Shop by Category</h2>
-          <div class="underline-accent"></div>
+    <main class="urgent-tailor-page">
+      <section class="urgent-tailor-main">
+        <div class="container urgent-wrap">
+          <div class="urgent-header">
+            <h2>Urgent Tailoring Service</h2>
+            <p>Premium bespoke stitching with 72-hour express delivery.</p>
+          </div>
+
+          <div class="urgent-steps" aria-label="Tailoring progress">
+            <div class="urgent-step done"><i class="bx bx-check"></i></div>
+            <div class="urgent-step active"><span>2</span></div>
+            <div class="urgent-step"><span>3</span></div>
+          </div>
+
+          <section class="urgent-card" aria-labelledby="urgent-measurement-heading">
+            <h3 id="urgent-measurement-heading">Body Measurements</h3>
+            <p>Please provide accurate measurements in inches.</p>
+
+            <form
+              class="urgent-form"
+              id="urgent-step-two-form"
+              action="urgent-tailor-review.html"
+              method="get"
+              novalidate
+            >
+              <div class="urgent-measure-grid">
+                <label>
+                  Chest (inches)
+                  <input name="chest" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+                <label>
+                  Waist (inches)
+                  <input name="waist" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+                <label>
+                  Hips (inches)
+                  <input name="hips" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+                <label>
+                  Shoulder (inches)
+                  <input name="shoulder" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+                <label>
+                  Sleeve (inches)
+                  <input name="sleeve" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+                <label>
+                  Length (inches)
+                  <input name="length" type="number" step="0.1" min="0" placeholder="0.0" required />
+                  <span class="urgent-field-error" aria-live="polite"></span>
+                </label>
+              </div>
+
+              <label class="urgent-notes-label">
+                Additional Notes (Special Requests)
+                <textarea
+                  name="notes"
+                  rows="3"
+                  placeholder="E.g., high neck, flared sleeves..."
+                  required
+                ></textarea>
+                <span class="urgent-field-error" aria-live="polite"></span>
+              </label>
+
+              <div class="urgent-actions">
+                <a href="urgent-tailor.html" class="urgent-back-btn">Back</a>
+                <button type="submit" class="urgent-next-btn">Review Request</button>
+              </div>
+            </form>
+          </section>
         </div>
-
-        <div class="category-grid">
-          <a href="/shop?category=textiles" class="category-card group">
-            <div class="overlay"></div>
-            <img
-              src="/Images/material.jpg"
-              alt="Fabrics"
-              class="zoom-img"
-            />
-            <div class="category-content">
-              <h3 class="category-title">Ankara Fabrics</h3>
-              <span class="explore-link">
-                Explore <i data-lucide="arrow-right"></i>
-              </span>
-            </div>
-          </a>
-
-          <a href="/shop?category=lace" class="category-card group">
-            <div class="overlay"></div>
-            <img
-              src="/Images/asoebi.png"
-              alt="Lace"
-              class="zoom-img"
-            />
-            <div class="category-content">
-              <h3 class="category-title">Asoebi</h3>
-              <span class="explore-link">
-                Explore <i data-lucide="arrow-right"></i>
-              </span>
-            </div>
-          </a>
-
-          <a href="/shop?category=casual" class="category-card group">
-            <div class="overlay"></div>
-            <img
-              src="/Images/Accessories.jpg"
-              alt="Casual"
-              class="zoom-img"
-            />
-            <div class="category-content">
-              <h3 class="category-title">Accessories</h3>
-              <span class="explore-link">
-                Explore <i data-lucide="arrow-right"></i>
-              </span>
-            </div>
-          </a>
-
-          <a href="/shop?category=ankara" class="category-card group">
-            <div class="overlay"></div>
-            <img
-              src="/Images/readytowear.svg"
-              alt="Ankara"
-              class="zoom-img"
-            />
-            <div class="category-content">
-              <h3 class="category-title">Ready-to-Wear</h3>
-              <span class="explore-link">
-                Explore <i data-lucide="arrow-right"></i>
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- New arrivals -->
-
-    <section class="section arrivals-section">
-      <div class="container">
-        <div class="arrivals-header">
-          <div>
-            <h2 class="section-title">New Arrivals</h2>
-            <p class="subtitle">Fresh from the loom to your wardrobe.</p>
-          </div>
-          <a href="/shop" class="view-all-desktop">
-            View All Products <i data-lucide="arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-wrapper">
-              <span class="product-tag">New Arrival</span>
-              <img
-                src="/Images/image 18.png"
-                alt="Product"
-              />
-            </div>
-            <div class="product-info">
-              <p class="product-category">LADIES</p>
-              <h4 class="product-name">Royal Blue & Gold Ankara</h4>
-              <p class="product-price">₦15,000</p>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-wrapper">
-              <span class="product-tag">New Arrival</span>
-              <img
-                src="/Images/image 11.png"
-                alt="Product"
-              />
-            </div>
-            <div class="product-info">
-              <p class="product-category">ASEOBI</p>
-              <h4 class="product-name">Emerald Green Lace</h4>
-              <p class="product-price">₦45,000</p>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-wrapper">
-              <span class="product-tag">New Arrival</span>
-              <img
-                src="/Images/image 8.png"
-                alt="Product"
-              />
-            </div>
-            <div class="product-info">
-              <p class="product-category">ASOKE</p>
-              <h4 class="product-name">Handwoven Magenta Asooke</h4>
-              <p class="product-price">₦85,000</p>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-img-wrapper">
-              <span class="product-tag">New Arrival</span>
-              <img
-                src="/Images/image 20.png"
-                alt="Product"
-              />
-            </div>
-            <div class="product-info">
-              <p class="product-category">MEN</p>
-              <h4 class="product-name">Men's Senator Polish Cotton</h4>
-              <p class="product-price">₦25,000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="view-all-mobile">
-          <a href="/shop" class="btn-outline">View All Products</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="features-section">
-      <div class="container">
-        <div class="features-grid">
-          <div class="feature-item">
-            <div class="icon-circle"><i class="bx bxs-truck"></i></div>
-            <h3>Nationwide Delivery</h3>
-            <p>Fast and reliable shipping across Nigeria and beyond.</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon-circle"><i class="bx bx-shield-quarter"></i></div>
-            <h3>Authentic Quality</h3>
-            <p>100% genuine fabrics sourced directly from manufacturers.</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon-circle"><i class="bx bx-time-five"></i></div>
-            <h3>24/7 Support</h3>
-            <p>Our customer service team is always here to help you.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="site-footer">
       <div class="container">
@@ -372,7 +221,7 @@
             <h3>Customer Care</h3>
             <ul class="footer-links">
               <li><a href="#">Delivery Information</a></li>
-              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Returns &amp; Exchanges</a></li>
               <li><a href="#">Order Tracking</a></li>
               <li><a href="#">Support</a></li>
             </ul>
@@ -381,9 +230,9 @@
           <div class="footer-col footer-nav-col">
             <h3>Company</h3>
             <ul class="footer-links">
-              <li><a href="/about.html">About Us</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="urgent-tailor.html">Urgent Tailor</a></li>
             </ul>
           </div>
         </div>
@@ -440,9 +289,8 @@
       </a>
     </nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.js"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/slider.js"></script>
+    <script src="/js/urgent-tailor-measurements.js"></script>
       <script src="/js/whatsapp-widget.js"></script>
   </body>
 </html>

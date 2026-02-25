@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Account Details | Taye's Fabrics</title>
+  </head>
+  <body>
+    <main class="profile-details-page">
+      <div class="profile-success-banner" id="profile-success-banner" role="status" aria-live="polite">
+        <i class="bx bx-check-circle"></i>
+        <span id="profile-success-message"></span>
+        <button type="button" id="profile-success-close" aria-label="Dismiss message">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+
+      <section class="profile-details-header">
+        <div class="container">
+          <button type="button" class="profile-details-back" aria-label="Go back" onclick="history.back()">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <h1>Account Details</h1>
+        </div>
+      </section>
+
+      <section class="profile-details-content">
+        <div class="container">
+          <div class="profile-identity">
+            <img src="/Images/image 18.png" alt="Profile avatar" class="profile-identity-avatar" />
+            <h3 id="profile-display-name">Ngozi Ukah</h3>
+          </div>
+
+          <div class="profile-field-list">
+            <article class="profile-field-item" data-key="firstName" data-label="First name">
+              <p>FIRST NAME</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value" id="profile-firstName">Ngozi</span>
+                <button type="button" class="profile-edit-btn" aria-label="Edit first name">
+                  <i class="bx bx-edit-alt"></i>
+                </button>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+
+            <article class="profile-field-item" data-key="lastName" data-label="Last name">
+              <p>LAST NAME</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value" id="profile-lastName">Ukah</span>
+                <button type="button" class="profile-edit-btn" aria-label="Edit last name">
+                  <i class="bx bx-edit-alt"></i>
+                </button>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+
+            <article class="profile-field-item" data-key="mobile" data-label="Mobile number">
+              <p>MOBILE NUMBER</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value profile-underlined" id="profile-mobile">+2349136664497</span>
+                <div class="profile-row-actions">
+                  <span class="profile-verified" id="profile-mobile-verified">Verified</span>
+                  <button type="button" class="profile-edit-btn" aria-label="Edit mobile number">
+                    <i class="bx bx-edit-alt"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+
+            <article class="profile-field-item" data-key="email" data-label="Email">
+              <p>EMAIL</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value profile-underlined" id="profile-email">ngozivicah@gmail.com</span>
+                <div class="profile-row-actions">
+                  <span class="profile-verified" id="profile-email-verified">Verified</span>
+                  <button type="button" class="profile-edit-btn" aria-label="Edit email">
+                    <i class="bx bx-edit-alt"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+
+            <article class="profile-field-item" data-key="address" data-label="Address">
+              <p>ADDRESS</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value" id="profile-address">Lekki, Lagos, Nigeria</span>
+                <button type="button" class="profile-edit-btn" aria-label="Edit address">
+                  <i class="bx bx-edit-alt"></i>
+                </button>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+
+            <article class="profile-field-item" data-key="passcode" data-label="Passcode">
+              <p>PASSCODE</p>
+              <div class="profile-field-row profile-display-row">
+                <span class="profile-field-value" id="profile-passcode">••••••</span>
+                <button type="button" class="profile-edit-btn" aria-label="Edit passcode">
+                  <i class="bx bx-edit-alt"></i>
+                </button>
+              </div>
+              <div class="profile-edit-area"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/account-details.js"></script>
+      <script src="/js/whatsapp-widget.js"></script>
+  </body>
+</html>

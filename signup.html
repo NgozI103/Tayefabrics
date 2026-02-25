@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign Up | Taye's Fabrics</title>
+  </head>
+  <body class="login-screen">
+    <main class="login-layout">
+      <section class="login-visual" aria-hidden="true">
+        <img src="/Images/image 41.png" alt="Fashion model" class="login-visual-image" />
+        <div class="login-visual-overlay">
+          <h2>Premium African Fabrics</h2>
+          <p>Sign up to start shopping the best collections.</p>
+        </div>
+      </section>
+
+      <section class="login-pane">
+        <div class="login-card">
+          <img src="/Images/logo.png" alt="Taye's Fabrics Logo" class="login-mobile-logo" />
+          <h1>Create Account</h1>
+          <p class="login-subtitle">Join us and start shopping</p>
+
+          <form id="signup-form" class="login-form" novalidate>
+            <label for="signup-full-name">Full Name</label>
+            <input id="signup-full-name" type="text" name="full_name" placeholder="Enter your full name" autocomplete="name" />
+            <span class="login-error" id="signup-full-name-error" aria-live="polite"></span>
+
+            <label for="signup-phone-number">Phone Number</label>
+            <div class="signup-phone-row">
+              <select id="signup-country-code" name="country_code" aria-label="Country code">
+                <option value="+234" data-country="NG" data-min="10" data-max="10">NG +234</option>
+                <option value="+1" data-country="US" data-min="10" data-max="10">US +1</option>
+                <option value="+44" data-country="GB" data-min="10" data-max="10">UK +44</option>
+                <option value="+233" data-country="GH" data-min="9" data-max="9">GH +233</option>
+                <option value="+27" data-country="ZA" data-min="9" data-max="9">ZA +27</option>
+                <option value="+254" data-country="KE" data-min="9" data-max="9">KE +254</option>
+                <option value="+20" data-country="EG" data-min="10" data-max="10">EG +20</option>
+                <option value="+212" data-country="MA" data-min="9" data-max="9">MA +212</option>
+                <option value="+225" data-country="CI" data-min="10" data-max="10">CI +225</option>
+                <option value="+228" data-country="TG" data-min="8" data-max="8">TG +228</option>
+                <option value="+229" data-country="BJ" data-min="8" data-max="8">BJ +229</option>
+                <option value="+230" data-country="MU" data-min="8" data-max="8">MU +230</option>
+                <option value="+231" data-country="LR" data-min="8" data-max="9">LR +231</option>
+                <option value="+232" data-country="SL" data-min="8" data-max="8">SL +232</option>
+                <option value="+235" data-country="TD" data-min="8" data-max="8">TD +235</option>
+                <option value="+237" data-country="CM" data-min="9" data-max="9">CM +237</option>
+                <option value="+240" data-country="GQ" data-min="9" data-max="9">GQ +240</option>
+                <option value="+241" data-country="GA" data-min="8" data-max="8">GA +241</option>
+                <option value="+242" data-country="CG" data-min="9" data-max="9">CG +242</option>
+                <option value="+243" data-country="CD" data-min="9" data-max="9">CD +243</option>
+                <option value="+245" data-country="GW" data-min="7" data-max="7">GW +245</option>
+                <option value="+248" data-country="SC" data-min="7" data-max="7">SC +248</option>
+                <option value="+249" data-country="SD" data-min="9" data-max="9">SD +249</option>
+                <option value="+250" data-country="RW" data-min="9" data-max="9">RW +250</option>
+                <option value="+251" data-country="ET" data-min="9" data-max="9">ET +251</option>
+                <option value="+252" data-country="SO" data-min="8" data-max="8">SO +252</option>
+                <option value="+253" data-country="DJ" data-min="8" data-max="8">DJ +253</option>
+                <option value="+255" data-country="TZ" data-min="9" data-max="9">TZ +255</option>
+                <option value="+256" data-country="UG" data-min="9" data-max="9">UG +256</option>
+                <option value="+257" data-country="BI" data-min="8" data-max="8">BI +257</option>
+                <option value="+258" data-country="MZ" data-min="9" data-max="9">MZ +258</option>
+                <option value="+260" data-country="ZM" data-min="9" data-max="9">ZM +260</option>
+                <option value="+261" data-country="MG" data-min="9" data-max="9">MG +261</option>
+                <option value="+263" data-country="ZW" data-min="9" data-max="9">ZW +263</option>
+                <option value="+264" data-country="NA" data-min="9" data-max="9">NA +264</option>
+                <option value="+265" data-country="MW" data-min="9" data-max="9">MW +265</option>
+                <option value="+266" data-country="LS" data-min="8" data-max="8">LS +266</option>
+                <option value="+267" data-country="BW" data-min="8" data-max="8">BW +267</option>
+                <option value="+268" data-country="SZ" data-min="8" data-max="8">SZ +268</option>
+                <option value="+269" data-country="KM" data-min="7" data-max="7">KM +269</option>
+                <option value="+353" data-country="IE" data-min="9" data-max="9">IE +353</option>
+                <option value="+33" data-country="FR" data-min="9" data-max="9">FR +33</option>
+                <option value="+34" data-country="ES" data-min="9" data-max="9">ES +34</option>
+                <option value="+39" data-country="IT" data-min="9" data-max="10">IT +39</option>
+                <option value="+49" data-country="DE" data-min="10" data-max="11">DE +49</option>
+                <option value="+61" data-country="AU" data-min="9" data-max="9">AU +61</option>
+                <option value="+81" data-country="JP" data-min="10" data-max="10">JP +81</option>
+                <option value="+86" data-country="CN" data-min="11" data-max="11">CN +86</option>
+                <option value="+91" data-country="IN" data-min="10" data-max="10">IN +91</option>
+                <option value="+92" data-country="PK" data-min="10" data-max="10">PK +92</option>
+                <option value="+971" data-country="AE" data-min="9" data-max="9">AE +971</option>
+              </select>
+              <input
+                id="signup-phone-number"
+                type="tel"
+                name="phone_number"
+                placeholder="Enter phone number"
+                inputmode="numeric"
+                autocomplete="tel-national"
+              />
+            </div>
+            <span class="login-error" id="signup-phone-number-error" aria-live="polite"></span>
+
+            <label for="signup-email">Email</label>
+            <input id="signup-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" />
+            <span class="login-error" id="signup-email-error" aria-live="polite"></span>
+
+            <label for="signup-password">Password</label>
+            <div class="login-password-wrap">
+              <input id="signup-password" class="login-password-field" type="password" name="password" placeholder="Enter your password" autocomplete="new-password" />
+              <button type="button" class="login-password-toggle" id="signup-password-toggle" aria-label="Show password">
+                <i class="bx bx-hide"></i>
+              </button>
+            </div>
+            <span class="login-error" id="signup-password-error" aria-live="polite"></span>
+
+            <label for="signup-confirm-password">Confirm Password</label>
+            <div class="login-password-wrap">
+              <input id="signup-confirm-password" class="login-password-field" type="password" name="confirm_password" placeholder="Confirm password" autocomplete="new-password" />
+              <button type="button" class="login-password-toggle" id="signup-confirm-password-toggle" aria-label="Show password">
+                <i class="bx bx-hide"></i>
+              </button>
+            </div>
+            <span class="login-error" id="signup-confirm-password-error" aria-live="polite"></span>
+
+            <button type="submit" class="login-submit-btn" id="signup-submit-btn" disabled>Create Account</button>
+
+            <p class="login-error login-global-error" id="signup-global-error" aria-live="polite"></p>
+            <p class="login-success" id="signup-success-message" aria-live="polite"></p>
+
+            <p class="login-signup-row">
+              Already have an account? <a href="login.html">Log in</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/signup.js"></script>
+      <script src="/js/whatsapp-widget.js"></script>
+  </body>
+</html>

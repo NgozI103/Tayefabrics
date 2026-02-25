@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login | Taye's Fabrics</title>
+  </head>
+  <body class="login-screen">
+    <main class="login-layout">
+      <section class="login-visual" aria-hidden="true">
+        <img src="/Images/image 41.png" alt="Fashion model" class="login-visual-image" />
+        <div class="login-visual-overlay">
+          <h2>Premium African Fabrics</h2>
+          <p>Sign in to continue shopping the best collections.</p>
+        </div>
+      </section>
+
+      <section class="login-pane">
+        <div class="login-card">
+          <img src="/Images/logo.png" alt="Taye's Fabrics Logo" class="login-mobile-logo" />
+          <h1>Welcome <span aria-hidden="true">👋</span></h1>
+          <p class="login-subtitle">Please login here</p>
+
+          <form id="login-form" class="login-form" novalidate>
+            <label for="login-email">Email Address</label>
+            <input id="login-email" type="email" name="email" placeholder="robertfox@example.com" autocomplete="email" />
+            <span class="login-error" id="login-email-error" aria-live="polite"></span>
+
+            <label for="login-password">Password</label>
+            <div class="login-password-wrap">
+              <input id="login-password" class="login-password-field" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" />
+              <button type="button" class="login-password-toggle" id="login-password-toggle" aria-label="Show password">
+                <i class="bx bx-hide"></i>
+              </button>
+            </div>
+            <span class="login-error" id="login-password-error" aria-live="polite"></span>
+
+            <div class="login-row">
+              <label class="login-remember">
+                <input id="remember-me" type="checkbox" />
+                <span>Remember Me</span>
+              </label>
+              <a href="forgot-password.html" class="login-forgot">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-submit-btn" id="login-submit-btn" disabled>Login</button>
+
+            <p class="login-signup-row">
+              Don't have an account? <a href="signup.html">Sign up</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/login-account.js"></script>
+      <script src="/js/whatsapp-widget.js"></script>
+  </body>
+</html>

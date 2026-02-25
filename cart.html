@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Shop | Taye's Fabrics</title>
+    <title>Cart | Taye's Fabrics</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -17,7 +17,7 @@
           <p>Order Online or Call Us: +234 706 370 1725</p>
           <ul class="d-flex">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="urgent-tailor.html">Urgent Tailor</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -29,12 +29,12 @@
           <ul class="nav-list d-flex">
             <li class="mobile-menu-header"><img src="/Images/logo.png" alt="Taye's Fabrics" class="mobile-menu-logo" /></li>
             <li class="nav-item desktop-nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item desktop-nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+            <li class="nav-item desktop-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
             <li class="nav-item desktop-nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item desktop-nav-item"><a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a></li>
             <li class="nav-item desktop-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             <li class="nav-item mobile-nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item mobile-nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+            <li class="nav-item mobile-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
             <li class="nav-item mobile-nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item mobile-nav-item"><a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a></li>
             <li class="nav-item mobile-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -49,23 +49,23 @@
             </li>
             <li class="icons d-flex">
               <div class="mobile-profile-dropdown">
-              <button type="button" class="mobile-profile-toggle icon" aria-haspopup="true" aria-expanded="false" aria-label="Profile menu">
-                <i class="bx bx-user"></i>
-              </button>
-              <div class="mobile-profile-menu" role="menu" aria-hidden="true">
-                <ul class="desktop-profile-menu-list profile-state-auth" role="none">
-                  <li role="none"><a role="menuitem" href="profile-details.html">My Account</a></li>
-                  <li role="none"><a role="menuitem" href="wishlist.html">Wishlist</a></li>
-                  <li role="none"><a role="menuitem" href="#">My Orders</a></li>
-                  <li role="none"><a role="menuitem" href="#">Address</a></li>
-                  <li role="none"><button type="button" class="mobile-logout-btn" role="menuitem">Logout</button></li>
-                </ul>
-                <div class="profile-state-guest">
-                  <p>No profile found.</p>
-                  <a href="login.html">Create an account to continue</a>
+                <button type="button" class="mobile-profile-toggle icon" aria-haspopup="true" aria-expanded="false" aria-label="Profile menu">
+                  <i class="bx bx-user"></i>
+                </button>
+                <div class="mobile-profile-menu" role="menu" aria-hidden="true">
+                  <ul class="desktop-profile-menu-list profile-state-auth" role="none">
+                    <li role="none"><a role="menuitem" href="profile-details.html">My Account</a></li>
+                    <li role="none"><a role="menuitem" href="wishlist.html">Wishlist</a></li>
+                    <li role="none"><a role="menuitem" href="#">My Orders</a></li>
+                    <li role="none"><a role="menuitem" href="#">Address</a></li>
+                    <li role="none"><button type="button" class="mobile-logout-btn" role="menuitem">Logout</button></li>
+                  </ul>
+                  <div class="profile-state-guest">
+                    <p>No profile found.</p>
+                    <a href="login.html">Create an account to continue</a>
+                  </div>
                 </div>
               </div>
-            </div>
               <a href="#" class="icon"><i class="bx bx-search"></i></a>
               <a href="wishlist.html" class="icon"><i class="bx bx-heart"></i><span class="d-flex">0</span></a>
               <a href="cart.html" class="icon"><i class="bx bx-cart"></i><span class="d-flex">0</span></a>
@@ -111,47 +111,22 @@
       </div>
     </header>
 
-    <main class="shop-page">
-      <section class="shop-section">
-        <div class="container">
-          <div class="shop-layout">
-            <aside class="shop-sidebar" id="shop-sidebar">
-              <button id="mobile-filter-close" class="shop-filter-close" type="button" aria-label="Close filters">
-                <i class="bx bx-x"></i>
-              </button>
-              <h1 class="shop-title">Shop</h1>
-              <p class="shop-results" id="result-count">Showing 0 results</p>
+    <main class="cart-wishlist-page" data-page="cart">
+      <section class="container cart-wishlist-wrap">
+        <h3 class="cart-wishlist-title">My Cart</h3>
+        <div class="cw-header-divider" aria-hidden="true"></div>
 
-              <div class="filter-group">
-                <h3>Categories</h3>
-                <div id="category-filters" class="category-filters"></div>
-              </div>
+        <div class="cw-empty" id="cart-empty-state">
+          <div class="cw-empty-illustration"><i class="bx bx-cart"></i></div>
+          <h4>Your cart is empty</h4>
+          <p>Add items you love and find them here</p>
+          <a href="shop.html" class="cw-primary-btn cw-empty-btn"
+            ><i class="bx bx-store"></i><span>Start Shopping</span></a
+          >
+        </div>
 
-              <div class="filter-group">
-                <h3>Price Range</h3>
-                <input
-                  id="price-range"
-                  type="range"
-                  min="0"
-                  max="200000"
-                  step="500"
-                  value="200000"
-                />
-                <div class="price-scale">
-                  <span>₦0</span>
-                  <span id="price-range-value">₦200,000.00</span>
-                </div>
-              </div>
-            </aside>
-
-            <section class="shop-content">
-              <button id="mobile-filter-toggle" class="mobile-filter-toggle" type="button">
-                Filters <i class="bx bx-slider-alt"></i>
-              </button>
-              <div id="shop-products" class="shop-products-grid"></div>
-              <div id="shop-pagination" class="shop-pagination"></div>
-            </section>
-          </div>
+        <div class="cw-content" id="cart-content" hidden>
+          <div class="cw-list" id="cart-items"></div>
         </div>
       </section>
     </main>
@@ -196,8 +171,8 @@
           <div class="footer-col footer-nav-col">
             <h3>Company</h3>
             <ul class="footer-links">
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
               <li><a href="faq.html">FAQs</a></li>
             </ul>
           </div>
@@ -230,25 +205,6 @@
         <span class="mobile-badge">0</span>
         <span>Cart</span>
       </a>
-      <div class="mobile-bottom-item mobile-bottom-profile-dropdown">
-        <button type="button" class="mobile-bottom-profile-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Profile menu">
-          <i class="bx bx-user"></i>
-          <span>Profile</span>
-        </button>
-        <div class="mobile-bottom-profile-menu" role="menu" aria-hidden="true">
-          <ul class="desktop-profile-menu-list profile-state-auth" role="none">
-            <li role="none"><a role="menuitem" href="profile-details.html">My Account</a></li>
-            <li role="none"><a role="menuitem" href="wishlist.html">Wishlist</a></li>
-            <li role="none"><a role="menuitem" href="#">My Orders</a></li>
-            <li role="none"><a role="menuitem" href="#">Address</a></li>
-            <li role="none"><button type="button" class="mobile-bottom-logout-btn" role="menuitem">Logout</button></li>
-          </ul>
-          <div class="profile-state-guest">
-            <p>No profile found.</p>
-            <a href="login.html">Create an account to continue</a>
-          </div>
-        </div>
-      </div>
       <a href="contact.html" class="mobile-bottom-item">
         <i class="bx bx-support"></i>
         <span>Support</span>
@@ -256,8 +212,7 @@
     </nav>
 
     <script src="/js/index.js"></script>
-    <script src="/js/products.js"></script>
-    <script src="/js/shop.js"></script>
+    <script src="/js/cart-wishlist.js"></script>
       <script src="/js/whatsapp-widget.js"></script>
   </body>
 </html>

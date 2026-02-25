@@ -12,3 +12,4 @@ if (slider1) {
     animationTimingFunc: "linear",
   }).mount();
 }
+

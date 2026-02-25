@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Taye's fabrics</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <!-- Top nav -->
+      <div class="top-nav">
+        <div class="container d-flex">
+          <p>Order Online or Call Us: +234 706 370 1725</p>
+          <ul class="d-flex">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="urgent-tailor.html">Urgent Tailor</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <img src="/Images/logo.png" alt="Brand Logo" class="logo" />
+          <ul class="nav-list d-flex">
+            <li class="mobile-menu-header"><img src="/Images/logo.png" alt="Taye's Fabrics" class="mobile-menu-logo" /></li>
+            <li class="nav-item desktop-nav-item"><a href="home.html" class="nav-link active">Home</a></li>
+            <li class="nav-item desktop-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+            <li class="nav-item desktop-nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item desktop-nav-item"><a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a></li>
+            <li class="nav-item desktop-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item mobile-nav-item"><a href="home.html" class="nav-link active">Home</a></li>
+            <li class="nav-item mobile-nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+            <li class="nav-item mobile-nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item mobile-nav-item"><a href="urgent-tailor.html" class="nav-link">Urgent Tailor</a></li>
+            <li class="nav-item mobile-nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="mobile-auth-actions">
+              <a href="login.html" class="mobile-auth-btn mobile-auth-btn-outline">Login</a>
+              <a href="signup.html" class="mobile-auth-btn mobile-auth-btn-solid">Sign Up</a>
+            </li>
+            <li class="mobile-menu-legal">
+              <a href="#">Terms Of Service</a>
+              <a href="#">Privacy Policy</a>
+              <a href="contact.html">Support</a>
+            </li>
+            <li class="icons d-flex">
+              <div class="mobile-profile-dropdown">
+              <button type="button" class="mobile-profile-toggle icon" aria-haspopup="true" aria-expanded="false" aria-label="Profile menu">
+                <i class="bx bx-user"></i>
+              </button>
+              <div class="mobile-profile-menu" role="menu" aria-hidden="true">
+                <ul class="desktop-profile-menu-list profile-state-auth" role="none">
+                  <li role="none"><a role="menuitem" href="profile-details.html">My Account</a></li>
+                  <li role="none"><a role="menuitem" href="wishlist.html">Wishlist</a></li>
+                  <li role="none"><a role="menuitem" href="#">My Orders</a></li>
+                  <li role="none"><a role="menuitem" href="#">Address</a></li>
+                  <li role="none"><button type="button" class="mobile-logout-btn" role="menuitem">Logout</button></li>
+                </ul>
+                <div class="profile-state-guest">
+                  <p>No profile found.</p>
+                  <a href="login.html">Create an account to continue</a>
+                </div>
+              </div>
+            </div>
+              <div class="icon"><i class="bx bx-search"></i></div>
+              <div class="icon">
+                <i class="bx bx-heart"></i>
+                <span class="d-flex">0</span>
+              </div>
+              <a href="cart.html" class="icon"
+                ><i class="bx bx-cart"></i>
+                <span class="d-flex">0</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Icons -->
+          <div class="desktop-header-actions">
+            <label class="desktop-header-search">
+              <i class="bx bx-search"></i>
+              <input type="text" placeholder="Search fabrics..." />
+            </label>
+            <div class="desktop-profile-dropdown">
+              <button type="button" class="desktop-profile-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Profile menu">
+                <i class="bx bx-user"></i>
+                <i class="bx bx-chevron-down"></i>
+              </button>
+              <div class="desktop-profile-menu" role="menu" aria-hidden="true">
+                <ul class="desktop-profile-menu-list profile-state-auth" role="none">
+                  <li role="none"><a role="menuitem" href="profile-details.html">My Account</a></li>
+                  <li role="none"><a role="menuitem" href="wishlist.html">Wishlist</a></li>
+                  <li role="none"><a role="menuitem" href="#">My Orders</a></li>
+                  <li role="none"><a role="menuitem" href="#">Address</a></li>
+                  <li role="none"><button type="button" class="desktop-logout-btn" role="menuitem">Logout</button></li>
+                </ul>
+                <div class="profile-state-guest">
+                  <p>No profile found.</p>
+                  <a href="login.html">Create an account to continue</a>
+                </div>
+              </div>
+            </div>
+            <div class="desktop-auth-group">
+              <a href="login.html" class="desktop-auth-link">Login</a>
+              <a href="login.html" class="desktop-signup-btn">Sign Up</a>
+            </div>
+            <a href="cart.html" class="desktop-cart" aria-label="Cart">
+              <i class="bx bx-cart"></i>
+              <span>0</span>
+            </a>
+          </div>
+          <!-- Hamburger -->
+          <div class="hamburger">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="glide" id="glide1">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides" id="hero-container"></ul>
+
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button
+                class="glide__bullet"
+                data-glide-dir="=0"
+                aria-label="Go to slide 1"
+              ></button>
+              <button
+                class="glide__bullet"
+                data-glide-dir="=1"
+                aria-label="Go to slide 2"
+              ></button>
+              <button
+                class="glide__bullet"
+                data-glide-dir="=2"
+                aria-label="Go to slide 3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Category -->
+
+    <section class="section category-section">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="section-title">Shop by Category</h2>
+          <div class="underline-accent"></div>
+        </div>
+
+        <div class="category-grid">
+          <a href="/shop?category=textiles" class="category-card group">
+            <div class="overlay"></div>
+            <img
+              src="/Images/material.jpg"
+              alt="Fabrics"
+              class="zoom-img"
+            />
+            <div class="category-content">
+              <h3 class="category-title">Ankara Fabrics</h3>
+              <span class="explore-link">
+                Explore <i data-lucide="arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/shop?category=lace" class="category-card group">
+            <div class="overlay"></div>
+            <img
+              src="/Images/image 41.png"
+              alt="Lace"
+              class="zoom-img"
+            />
+            <div class="category-content">
+              <h3 class="category-title">Asoebi</h3>
+              <span class="explore-link">
+                Explore <i data-lucide="arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/shop?category=casual" class="category-card group">
+            <div class="overlay"></div>
+            <img
+              src="/Images/Accessories.jpg"
+              alt="Casual"
+              class="zoom-img"
+            />
+            <div class="category-content">
+              <h3 class="category-title">Accessories</h3>
+              <span class="explore-link">
+                Explore <i data-lucide="arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/shop?category=ankara" class="category-card group">
+            <div class="overlay"></div>
+            <img
+              src="/Images/image 36.png"
+              alt="Ankara"
+              class="zoom-img"
+            />
+            <div class="category-content">
+              <h3 class="category-title">Ready-to-Wear</h3>
+              <span class="explore-link">
+                Explore <i data-lucide="arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- New arrivals -->
+
+    <section class="section arrivals-section">
+      <div class="container">
+        <div class="arrivals-header">
+          <div>
+            <h2 class="section-title">New Arrivals</h2>
+            <p class="subtitle">Fresh from the loom to your wardrobe.</p>
+          </div>
+          <a href="/shop" class="view-all-desktop">
+            View All Products <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="product-tag">New Arrival</span>
+              <img
+                src="/Images/image 18.png"
+                alt="Product"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-category">LADIES</p>
+              <h4 class="product-name">Royal Blue & Gold Ankara</h4>
+              <p class="product-price">₦15,000</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="product-tag">New Arrival</span>
+              <img
+                src="/Images/image 11.png"
+                alt="Product"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-category">ASEOBI</p>
+              <h4 class="product-name">Emerald Green Lace</h4>
+              <p class="product-price">₦45,000</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="product-tag">New Arrival</span>
+              <img
+                src="/Images/image 8.png"
+                alt="Product"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-category">ASOKE</p>
+              <h4 class="product-name">Handwoven Magenta Asooke</h4>
+              <p class="product-price">₦85,000</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="product-tag">New Arrival</span>
+              <img
+                src="/Images/image 20.png"
+                alt="Product"
+              />
+            </div>
+            <div class="product-info">
+              <p class="product-category">MEN</p>
+              <h4 class="product-name">Men's Senator Polish Cotton</h4>
+              <p class="product-price">₦25,000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-mobile">
+          <a href="/shop" class="btn-outline">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="icon-circle"><i class="bx bxs-truck"></i></div>
+            <h3>Nationwide Delivery</h3>
+            <p>Fast and reliable shipping across Nigeria and beyond.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-circle"><i class="bx bx-shield-quarter"></i></div>
+            <h3>Authentic Quality</h3>
+            <p>100% genuine fabrics sourced directly from manufacturers.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-circle"><i class="bx bx-time-five"></i></div>
+            <h3>24/7 Support</h3>
+            <p>Our customer service team is always here to help you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-brand">
+            <img src="/Images/footerlogo.png" alt="Footer Logo" class="footer-logo" />
+            <p>
+              Bringing you the finest selection of authentic African fabrics,
+              from vibrant Ankara prints to elegant Lace and handwoven Asooke.
+            </p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/fabricsby_tayejenifa?igsh=MXdnbGN0NHlsYWo2bA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1ChAwKeiYn/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.tiktok.com/@fabricsby_tayejenifa?_r=1&_t=ZS-928Trwu4lUr" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="bx bxl-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-nav-col">
+            <h3>Shop</h3>
+            <ul class="footer-links">
+              <li><a href="/shop?category=ankara">Ankara Fabrics</a></li>
+              <li><a href="/shop?category=lace">Lace Materials</a></li>
+              <li><a href="/shop?category=mens">Men's Collection</a></li>
+              <li><a href="/shop?category=ready-to-wear">Ready-to-Wear</a></li>
+              <li><a href="/shop?category=accessories">Accessories</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-nav-col">
+            <h3>Customer Care</h3>
+            <ul class="footer-links">
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-nav-col">
+            <h3>Company</h3>
+            <ul class="footer-links">
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/faq.html">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Taye's Fabrics. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/slider.js"></script>
+      <script src="/js/whatsapp-widget.js"></script>
+  </body>
+</html>

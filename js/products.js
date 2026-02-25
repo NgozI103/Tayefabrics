@@ -1,0 +1,98 @@
+window.TAYE_PRODUCTS = [
+  {
+    id: 1,
+    category: "Ankara Fabrics",
+    name: "Java Gold Ankara Wax Jan 26 Design - Pine Green",
+    price: 25500,
+    image: "/Images/image 18.png",
+    description:
+      "Premium Ankara fabric with rich color depth and durable finish, ideal for elegant everyday and occasion wear.",
+    material: "Premium Cotton Wax",
+    length: "6 Yards",
+    origin: "West Africa",
+  },
+  {
+    id: 2,
+    category: "Aseobi",
+    name: "Java Gold Ankara Wax Jan 26 Design - Pale Brown",
+    price: 25500,
+    image: "/Images/image 11.png",
+    description:
+      "A refined floral Ankara design with warm earthy tones, crafted for statement outfits and coordinated sets.",
+    material: "Premium Cotton Wax",
+    length: "6 Yards",
+    origin: "West Africa",
+  },
+  {
+    id: 3,
+    category: "Ready-to-Wear",
+    name: "Java Gold Ankara Wax Jan 26 Design - Pink Flower",
+    price: 25500,
+    image: "/Images/image 20.png",
+    description:
+      "Bold floral patterns and long-lasting print quality make this fabric perfect for standout dresses and tops.",
+    material: "Premium Cotton Wax",
+    length: "6 Yards",
+    origin: "West Africa",
+  },
+  {
+    id: 4,
+    category: "Ready-to-Wear",
+    name: "Java Gold Ankara Wax Jan 26 Design - Steel Blue",
+    price: 25500,
+    image: "/Images/image 36.png",
+    description:
+      "Cool steel-blue tones paired with striking motifs for modern traditional styles and special occasions.",
+    material: "Premium Cotton Wax",
+    length: "6 Yards",
+    origin: "West Africa",
+  },
+  {
+    id: 5,
+    category: "Accessories",
+    name: "Beaded Ankara Necklace",
+    price: 8000,
+    image: "/Images/Accessories.jpg",
+    description:
+      "Hand-finished accessory inspired by Ankara aesthetics, designed to complement both casual and formal looks.",
+    material: "Mixed Fabric & Beads",
+    length: "One Size",
+    origin: "Nigeria",
+  },
+  {
+    id: 6,
+    category: "Ankara Fabrics",
+    name: "Classic Dutch Wax Print",
+    price: 12000,
+    image: "/Images/fabrics.jpg",
+    description:
+      "Classic Dutch wax print known for vibrant saturation and dependable quality suitable for bespoke tailoring.",
+    material: "Cotton Wax",
+    length: "6 Yards",
+    origin: "West Africa",
+  },
+  {
+    id: 7,
+    category: "Aseobi",
+    name: "Bridal Asoebi Set",
+    price: 95000,
+    image: "/Images/asoebi.png",
+    description:
+      "A premium bridal asoebi set created for celebration styles with sophisticated texture and shine.",
+    material: "Luxury Blend",
+    length: "Complete Set",
+    origin: "Nigeria",
+  },
+  {
+    id: 8,
+    category: "Accessories",
+    name: "Turban and Accessory Set",
+    price: 14000,
+    image: "/Images/men fabric.png",
+    description:
+      "Coordinated turban and matching accessories tailored for clean finishing and versatile styling.",
+    material: "Cotton Blend",
+    length: "Set",
+    origin: "Nigeria",
+  },
+];
