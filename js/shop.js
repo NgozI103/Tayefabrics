@@ -8,17 +8,122 @@ const mobileFilterToggle = document.getElementById("mobile-filter-toggle");
 const mobileFilterClose = document.getElementById("mobile-filter-close");
 const sidebar = document.getElementById("shop-sidebar");
 
-const products = Array.isArray(window.TAYE_PRODUCTS) ? window.TAYE_PRODUCTS : [];
+const CART_KEY = "taye_cart";
+const WISHLIST_KEY = "taye_wishlist";
 
+const products = Array.isArray(window.TAYE_PRODUCTS) ? window.TAYE_PRODUCTS : [];
 const categories = [...new Set(products.map((product) => product.category))];
 
 const itemsPerPage = 6;
 let currentPage = 1;
 let selectedCategories = new Set(categories);
 let selectedMaxPrice = 200000;
+let searchTerm = "";
 
 function formatPrice(value) {
   return `₦${value.toLocaleString()}`;
+}
+
+function readStorage(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function writeStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+  window.dispatchEvent(new Event("taye-storage-update"));
+}
+
+function isReadyToWear(category) {
+  return String(category || "").toLowerCase().includes("ready-to-wear");
+}
+
+function isMaterialItem(category) {
+  return !isReadyToWear(category);
+}
+
+function showToast(message, type = "success") {
+  let toast = document.getElementById("shop-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "shop-toast";
+    toast.className = "shop-toast";
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.remove("show", "error");
+  if (type === "error") toast.classList.add("error");
+
+  window.requestAnimationFrame(() => {
+    toast.classList.add("show");
+  });
+
+  window.setTimeout(() => {
+    toast.classList.remove("show");
+  }, 1800);
+}
+
+function optionMarkup(product) {
+  return "";
+}
+
+function validateSelections(product, card) {
+  return { valid: true, options: {} };
+}
+
+function addToCart(product, selectedOptions = {}) {
+  const cart = readStorage(CART_KEY);
+  const optionKey = JSON.stringify(selectedOptions || {});
+
+  const existing = cart.find(
+    (item) => String(item.id) === String(product.id) && JSON.stringify(item.selectedOptions || {}) === optionKey
+  );
+
+  if (existing) {
+    existing.quantity = (Number(existing.quantity) || 1) + 1;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      image: product.image,
+      price: Number(product.price) || 0,
+      quantity: 1,
+      category: product.category,
+      selectedOptions,
+    });
+  }
+
+  writeStorage(CART_KEY, cart);
+}
+
+function addToWishlist(product, selectedOptions = {}) {
+  const wishlist = readStorage(WISHLIST_KEY);
+  const optionKey = JSON.stringify(selectedOptions || {});
+
+  const exists = wishlist.some(
+    (item) => String(item.id) === String(product.id) && JSON.stringify(item.selectedOptions || {}) === optionKey
+  );
+
+  if (exists) return false;
+
+  wishlist.push({
+    id: product.id,
+    name: product.name,
+    image: product.image,
+    price: Number(product.price) || 0,
+    category: product.category,
+    selectedOptions,
+  });
+
+  writeStorage(WISHLIST_KEY, wishlist);
+  return true;
 }
 
 function renderCategoryFilters() {
@@ -83,10 +188,12 @@ function renderCategoryFilters() {
 }
 
 function getFilteredProducts() {
+  const normalizedSearch = searchTerm.trim().toLowerCase();
   return products.filter((product) => {
     const inCategory = selectedCategories.has(product.category);
     const inPrice = product.price <= selectedMaxPrice;
-    return inCategory && inPrice;
+    const inSearch = !normalizedSearch || String(product.name || "").toLowerCase().includes(normalizedSearch);
+    return inCategory && inPrice && inSearch;
   });
 }
 
@@ -94,7 +201,7 @@ function renderProducts(filteredProducts) {
   if (!productContainer) return;
 
   if (!filteredProducts.length) {
-    productContainer.innerHTML = "<p class='empty-state'>No products match your filters.</p>";
+    productContainer.innerHTML = `<p class='empty-state'>${searchTerm ? "Item not found." : "No products match your filters."}</p>`;
     return;
   }
 
@@ -108,10 +215,10 @@ function renderProducts(filteredProducts) {
           <div class="shop-image-wrap">
             <img src="${product.image}" alt="${product.name}" />
             <div class="shop-product-actions" aria-label="Quick actions">
-              <button class="shop-action-btn" type="button" aria-label="Add to wishlist">
+              <button class="shop-action-btn" type="button" aria-label="Add to wishlist" data-action="wishlist">
                 <i class="bx bx-heart"></i>
               </button>
-              <button class="shop-action-btn" type="button" aria-label="Add to cart">
+              <button class="shop-action-btn" type="button" aria-label="Add to cart" data-action="cart">
                 <i class="bx bx-cart"></i>
               </button>
             </div>
@@ -119,7 +226,8 @@ function renderProducts(filteredProducts) {
           <div class="shop-product-info">
             <h3 class="shop-product-title">${product.name}</h3>
             <p class="shop-product-price">${formatPrice(product.price)}</p>
-            <button class="shop-add-basket" type="button">
+            ${optionMarkup(product)}
+            <button class="shop-add-basket" type="button" data-action="cart">
               Add to basket <i class="bx bx-cart"></i>
             </button>
           </div>
@@ -129,6 +237,7 @@ function renderProducts(filteredProducts) {
     .join("");
 
   bindProductCardNavigation();
+  bindProductActions();
 }
 
 function bindProductCardNavigation() {
@@ -142,7 +251,7 @@ function bindProductCardNavigation() {
     };
 
     card.addEventListener("click", (event) => {
-      if (event.target.closest("button, a, input, label")) return;
+      if (event.target.closest("button, a, input, label, select, option")) return;
       goToProduct();
     });
 
@@ -151,6 +260,32 @@ function bindProductCardNavigation() {
         event.preventDefault();
         goToProduct();
       }
+    });
+  });
+}
+
+function bindProductActions() {
+  if (!productContainer) return;
+
+  productContainer.querySelectorAll(".shop-product-card").forEach((card) => {
+    const productId = Number(card.dataset.productId);
+    const product = products.find((item) => item.id === productId);
+    if (!product) return;
+
+    card.querySelectorAll('[data-action="cart"]').forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.href = `product.html?id=${product.id}&intent=cart`;
+      });
+    });
+
+    card.querySelectorAll('[data-action="wishlist"]').forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.href = `product.html?id=${product.id}&intent=wishlist`;
+      });
     });
   });
 }
@@ -270,7 +405,7 @@ function applyCategoryFromQuery() {
 
   const map = {
     textiles: "Ankara Fabrics",
-    lace: "Aseobi",
+    lace: "Asoebi",
     casual: "Ready-to-Wear",
     ankara: "Ankara Fabrics",
     accessories: "Accessories",
@@ -291,9 +426,20 @@ function applyCategoryFromQuery() {
   });
 }
 
+function applySearchFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const rawSearch = params.get("search");
+  searchTerm = String(rawSearch || "").trim();
+  if (!searchTerm) return;
+  document.querySelectorAll(".desktop-header-search input").forEach((input) => {
+    input.value = searchTerm;
+  });
+}
+
 if (productContainer) {
   renderCategoryFilters();
   applyCategoryFromQuery();
+  applySearchFromQuery();
 
   if (priceRangeValue) {
     priceRangeValue.textContent = formatPrice(selectedMaxPrice);

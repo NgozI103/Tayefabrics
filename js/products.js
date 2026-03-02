@@ -13,7 +13,7 @@ window.TAYE_PRODUCTS = [
   },
   {
     id: 2,
-    category: "Aseobi",
+    category: "Asoebi",
     name: "Java Gold Ankara Wax Jan 26 Design - Pale Brown",
     price: 25500,
     image: "/Images/image 11.png",
@@ -73,7 +73,7 @@ window.TAYE_PRODUCTS = [
   },
   {
     id: 7,
-    category: "Aseobi",
+    category: "Asoebi",
     name: "Bridal Asoebi Set",
     price: 95000,
     image: "/Images/asoebi.png",
